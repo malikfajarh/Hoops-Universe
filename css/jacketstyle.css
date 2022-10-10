@@ -1,0 +1,612 @@
+@-ms-viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+body, html{
+	background-color: #ff7300;
+	/* text-align: center; */
+	font-family: comic sans ms;
+	margin: 0 0;
+    padding: 0px;
+    /* width: 100%;
+    height: 200%; */
+}
+
+
+/* MULAI */
+.header{
+    position: relative;          /*absolute*/
+    height: 90px;
+    background-color: #ffffff;
+    z-index: #999;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: auto;
+    
+
+}
+
+.navigation-container{
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+#logo{
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 90px;
+    /* text-transform: uppercase;
+    font-size: 1.4cm;
+    font-weight: bold; */
+    height: 90px;
+    size: 0px;
+    padding: 0 2%;
+    display: flex;
+}
+
+.navigation{
+    float: right;
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    
+}
+
+.navigation ul{
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+    z-index: 9999;
+    
+}
+
+.navigation ul li{
+    float: left;
+    position: relative;
+}
+
+.navigation ul li a, .navigation ul li a:visited{
+    display: block;
+    padding:0px 20px;
+    line-height: 90px;
+    background: #ffffff;
+    color: black;
+    text-decoration: none;
+}
+
+.navigation ul li a:hover, .navigation ul li a:visited:hover{
+    background: #2581dc;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000000; 
+}
+
+.navigation ul li ul li{
+    min-width: 190px;
+}
+
+.navigation ul li ul li a{
+    padding: 15px;
+    line-height: 20px;
+}
+
+.drop-down{
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0.15);
+    display: none;
+    
+}
+
+/* .drop-down>li>a{
+    background: #ff7300 ;
+} */
+
+.navigation-mobile{
+    position: absolute;
+    float: right;
+    top: 0px;
+    right: 0px;
+    background: #ffffff;
+    height: 90px;
+    width: 70px;
+    display: none;
+}
+
+#navigation-toggle{
+    position: absolute;
+    left: 10px;
+    top: 34px; /*22*/
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+    margin-right: 3px;
+}
+
+/* HUmberger Bar animation */
+#navigation-toggle span,
+#navigation-toggle span:after,
+#navigation-toggle span:before{
+    cursor: pointer;
+    border-radius: 1px;
+    height: 4px;   /*3*/
+    width: 45px;    /*35*/
+    background: rgb(112, 112, 112);
+    position: absolute;
+    display: block;
+    content: '';
+    
+    transition: all 300ms ease-in-out;
+    /* line-height: 1.6; */
+}
+
+#navigation-toggle span:after{
+    bottom: -10px; /*5 7*/
+}
+
+#navigation-toggle span::before{
+    top: -10px;
+}
+
+#navigation-toggle.active span{
+    background: transparent;
+}
+
+#navigation-toggle.active span:after, #nav-toggle.active span:before{
+    top: 0px;
+}
+
+#navigation-toggle.active span:after{
+    transform: rotate(-45deg);
+}
+
+#navigation-toggle.active span:before{
+    transform: rotate(45deg);
+}
+
+
+/* responsive mobile*/
+@media only screen and (max-width: 790px) {
+
+    .navigation-mobile{
+        display: block;
+        
+    }
+
+    .navigation{
+        width: 100%;
+        padding: 70px 0px 0px;
+        margin-top: 20px;
+    }
+    
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul li{
+        float: none;
+    }
+
+    .navigation ul li a{
+        padding: 15px;
+        line-height: 20px;
+    }
+
+    .navigation ul li ul li a{
+        padding-left: 30px;
+        /* background: #999; */
+    }
+    
+    .drop-down{
+        position: static;
+    }
+}
+
+
+@media screen and (min-width: 799px) {
+    .navigation-list{
+        display: block !important;
+    }
+}
+
+.body{
+    background-color: #ff7300;
+	font-weight: normal;
+	color: #000000;
+	/* box-shadow: 0 0 20px rgba(0,0,0,0.4);  */
+    height: auto;
+    width: auto;
+    /* overflow-x: hidden; */
+}
+
+
+
+.main{
+	box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	/* margin-left:5%; */
+	width: 100%;
+}
+
+
+/* containacc */
+#containacc{
+    display: flex;
+    margin-top: 100px;
+    /* background: rgb(255, 255, 255); */
+    justify-content: space-around;
+
+}
+
+#tagline{
+    font-family: Cambria;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    padding: 40px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 25px;
+    /* background: whitesmoke; */
+    margin-top: 100px;
+    border: 1px solid;
+    box-shadow: 5px 10px #ffffff;
+    width: 70%;
+
+
+}
+
+#tagline:hover{
+    background: #fca055;
+}
+
+.acc-item{
+    height: 350px;
+    width: 250px;
+    background: #fc9541;
+    /* align-items: center;
+    justify-content: center; */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* margin-top: 50px; */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform .2s;
+    /* margin-top: 500px; */
+    font-family: tahoma;
+    font-weight: 900;
+    line-height: 30px;
+}
+
+.acc-item:hover{
+    transform: scale(1.1);
+    background: #fca055;
+
+}
+
+.caption{
+    margin-top: 2px;
+
+}
+
+.caption{
+    height: 50px;
+    
+    /* text-decoration: underline; */
+}
+
+#containacc .acc-item  a{
+    /* border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    background: #ff7300;
+    padding: 8px;
+}
+
+
+
+#containacc .acc-item  a:hover{
+    background: #ff831d;
+    text-decoration: transparent;
+
+}
+
+.acc-image{
+    width: 250px;
+    height: 250px;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s;
+    margin-top: 5px;
+    /* background: #2581dc; */
+    border-bottom: solid white;
+}
+
+
+#image1{
+    background-image: url(../image/Atlanta\ Hawks\ Jacket.png);
+    
+}
+
+#image2{
+    background-image: url(../image/Black\ Chicago\ Bulls\ Jacket.png);
+    
+}
+
+#image3{
+    background-image: url(../image/Black\ Golden\ State\ Warriors\ Jacket.png);
+    
+}
+
+#image4{
+    background-image: url(../image/Black\ Lakers\ Jacket.png);
+    
+}
+
+#image5{
+    background-image: url(../image/Blue\ Golden\ State\ Warriors\ Jacket.png);
+    
+}
+
+#image6{
+    background-image: url(../image/Claveland\ Jacket.png);
+    
+}
+
+#image7{
+    background-image: url(../image/Houston\ Rockets\ Jacket.png);
+    
+}
+
+#image8{
+    background-image: url(../image/Red\ Chicago\ Bulls\ Jacket.png);
+    
+}
+
+#image9{
+    background-image: url(../image/Toronto\ Raptors\ Jacket.png);
+    
+}
+
+#image10{
+    background-image: url(../image/Yellow\ Lakers\ Jacket.png);
+    
+}
+
+#harga{
+    color: #2c2c2c;
+}
+
+/* About Us */
+#containText{
+    margin-top: 300px;
+    color: white;
+    background: rgb(58, 58, 58);
+    /* margin-bottom: 70px; */
+    height: 340px;
+}
+
+#containText h3{
+    /* display:block; */
+    font-family: Tahoma;
+    font-size: 40px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+
+#containText p{
+	text-align:justify;text-indent:10%;
+    font-size: 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1% 10%;
+}
+
+
+.footer{
+	background-color: #ffffff;
+    height: 380px;
+}
+
+h5{
+	text-align: center;
+	font-weight: bold;
+	color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    /* top: 20px; */
+}
+
+
+#apps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apps-image{
+    margin-left: 20px; 
+    transition: transform .2s;
+}
+
+.apps-image:hover{
+    transform: scale(1.2);    
+}
+
+
+
+
+/* FULL HD */
+@media only screen and (min-width: 1300px) {
+    
+}
+
+
+/* UNDER 1300 PX */
+@media only screen and (max-width: 1300px) {
+    
+    
+    #tagline{
+        font-size: 30px;
+        padding: 30px;
+        width: 60%;
+    }
+
+    .acc-item{
+        width: 170px;
+        height: 150px;
+        margin-right: 30px;
+    }
+
+    .acc-image{
+        width: 150px;
+        height: 150px;
+
+    }
+
+    #containacc .acc-item  a{
+        /* border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px; */
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        background: #ffc391;
+        padding: 8px;
+    }
+
+    .caption{
+        display: block;
+        height: 40px;
+    }
+
+    .body{
+        height: 100%;
+        width: 100%;
+    }
+    #containText{
+        margin-top: 700px;
+    }
+
+    .apps-image{
+        width: auto;    
+    }
+
+    #harga{
+        font-size: 13px;
+    }
+
+    #containacc .acc-item  a{
+        font-size: 13px;
+    }
+
+    .caption{
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* UNDER 1025PX TABLET */
+@media only screen and (max-width: 1025px) {
+    
+    
+
+    #tagline{
+        font-size: 20px;
+        padding: 20px;
+        width: 50%;
+    }
+
+    .acc-item{
+        width: 120px;
+        height: 100px;
+        margin-right: 15px;
+
+    }
+
+    .acc-image{
+        width: 100px;
+        height: 100px;
+    }
+    
+
+    #containacc .acc-item  a{
+        /* border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px; */
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        background: #ffc391;
+        padding: 8px;
+    }
+
+    .caption{
+        display: block;
+        height: 40px;
+    }
+
+    .body{
+        height: 50%;
+        width: 100%;
+    }
+
+    #harga{
+        font-size: 10px;
+    }
+
+    #containacc .acc-item  a{
+        font-size: 9px;
+    }
+
+    .caption{
+        font-size: 11px;
+    }
+}
+
+
+/* UNDER 705PX PHONE */
+@media only screen and (max-width: 705px) {
+    
+    #tagline{
+        font-size: 10px;
+        padding: 10px;
+        width: 30%;
+    }
+
+    
+    .acc-item{
+        width: 90px;
+        height: 70px;
+        margin-right: 10px;
+    }
+
+    .acc-image{
+        width: 70px;
+        height: 70px;
+
+    }
+    .body{
+        height: 50%;
+        width: 100%;
+    }
+
+    #harga{
+        font-size: 8px;
+    }
+
+    #containacc .acc-item  a{
+        font-size: 8px;
+    }
+
+    .caption{
+        font-size: 10px;
+    }
+}
